@@ -1,0 +1,85 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Prevents unwanted scrolling */
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  overflow: hidden; /* Prevents unwanted scrollbars */
+}
+
+/* LEFT SECTION */
+main .left {
+  background-color: #000000;
+  position: relative;
+}
+
+/* CODE CONTAINER - THIS SCROLLS */
+.left .code {
+  flex-grow: 1; /* Expands to take available space */
+  overflow-y: auto; /* Enables vertical scrolling */
+  overflow-x: auto; /* Enables horizontal scrolling */
+  background-color: #0c0c0c;
+  padding: 10px;
+  border-radius: 0.7rem;
+  color: white;
+  font-size: 16px;
+  white-space: pre-wrap; /* Wrap long lines instead of hiding them */
+  word-wrap: break-word; /* Breaks long words */
+}
+
+/* REVIEW BUTTON */
+.left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(219, 219, 255);
+  color: black;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+}
+
+/* RIGHT SECTION */
+main .right {
+  background-color: #343434;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  overflow: auto; /* Enables scrolling if content overflows */
+  color: white;
+  border-radius: 0.7rem;
+}
+
+
+.loading {
+  font-size: 18px;
+  font-weight: bold;
+  color: #cacfb2;
+  text-align: center;
+  padding: 10px;
+}
