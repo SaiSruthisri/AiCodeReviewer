@@ -1,1 +1,24 @@
-BackEnd/.env
+# Ignore environment files  
+BackEnd/.env  
+FrontEnd/.env  
+
+# Ignore dependencies  
+BackEnd/node_modules/  
+FrontEnd/node_modules/  
+
+# Ignore build & output files  
+BackEnd/.dist/  
+FrontEnd/.dist/  
+FrontEnd/public/build/  
+.vite/  
+
+# Ignore log files  
+*.log  
+
+# Ignore lock files (optional)  
+package-lock.json  
+yarn.lock  
+
+# Ignore IDE/editor settings  
+.vscode/  
+.idea/  
