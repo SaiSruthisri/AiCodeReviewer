@@ -85,7 +85,6 @@ const model = genAI.getGenerativeModel({
 //takes prompt as input sends it to generative model gets its response as result to user on console.log()
 async function generateContent(prompt){
     const result = await model.generateContent(prompt);
-
     return result.response.text();
 }
 
